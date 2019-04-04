@@ -1,0 +1,53 @@
+@import "style";
+.right dl{
+    width: 230px;
+    height: 364px;
+    float: left;
+    margin-right: 19px;
+}
+.right dl:nth-of-type(4),
+.right dl:nth-of-type(8),
+.right dl:nth-of-type(12),
+.right dl:nth-of-type(16),
+.right dl:nth-of-type(20),
+.right dl:nth-of-type(24),
+.right dl:nth-of-type(28){
+    margin-right: 0;
+}
+.right dl dt{
+    position: relative;
+    border-bottom: 1px solid #c5c5c5;
+}
+.right dl dt a span{
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    font-size: 12px;
+    color: $color;
+}
+.right dl dt img{
+   width: 230px;
+}
+.right dl dt .zj{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 86px;
+    height: 24px;
+    img{
+        width: 86px;
+        height: 24px;
+    }
+}
+.right dd{
+    font-size: 14px;
+}
+.right dd p:nth-child(1){
+    font-weight: bold;
+    margin-top: 8px;
+    line-height: 16px;
+}
+.right dd p:nth-child(2){
+    color: #7a7a7a;
+    margin-bottom: 15px;
+}

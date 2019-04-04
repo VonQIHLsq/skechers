@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/list.css" />
+	</head>
+
+	<body>
+		<div id="header-container"></div>
+
+		<main>
+			<div class="left">
+				<h3>点击分类筛选</h3>
+				<div class="left-color">
+					<p>
+						<span>颜色</span>
+						<span>-</span>
+					</p>
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="left-caty">
+					<p>
+						<span>系列</span>
+						<span>-</span>
+					</p>
+					<ul>
+						<li><span></span> BURST</li>
+						<li><span></span> ENERGY LIGHTS</li>
+						<li><span></span> GO TRAIN</li>
+						<li><span></span> FLEX</li>
+						<li><span></span> SANDALS</li>
+						<li><span></span> MARK NASON</li>
+						<li><span></span> D'LITES</li>
+						<li><span></span> ON THE GO</li>
+						<li><span></span> GO RUN</li>
+						<li><span></span> GO WALK</li>
+						<li><span></span> SPORT</li>
+						<li><span></span> CASUAL</li>
+					</ul>
+				</div>
+			</div>
+			<div class="right" id="catyListContainer">
+				<h2>"所有男子"（824）</h2>
+				<div class="s">
+					<span>价格<em></em></span>
+					<span>尺码<em></em></span>
+					<span>排列方式<em></em></span>
+				</div>
+
+				<!--<dl>
+					<dt>
+						<a href="/html/detail.html">
+							<img src="/images/color_pur_1.jpg"/>
+							<div class="zj">
+								<img src="/images/zhengjia.png"/>
+							</div>
+							<span class="col">4色</span>
+						</a>
+					</dt>
+					<dd>
+						<p>D'LITES 3.0</p>
+						<p>男女同款时尚运动鞋</p>
+						<p>¥649.00</p>
+					</dd>
+				</dl>-->
+			</div>
+		</main>
+
+		<div id="footer-container"></div>
+
+		<script type="text/html" id="catyList">
+
+			<h2 id="listTitle">"所有男子"（824）</h2>
+			<div class="s">
+				<span>价格<em></em></span>
+				<span>尺码<em></em></span>
+				<span>排列方式<em></em></span>
+			</div>
+			{{each list item}}
+			<dl>
+				<dt>
+					<a href="/html/detail.html?id={{item.id}}">
+						<img src="{{item.src}}"/>
+						<div class="zj">
+							<img src="/images/zhengjia.png"/>
+						</div>
+						<span class="col">{{item.colornum}}色</span>
+					</a>
+				</dt>
+				<dd>
+					<p>{{item.engname}}</p>
+					<p>{{item.name}}</p>
+					<p>¥{{item.price}}.00</p>
+				</dd>
+			</dl>
+			{{/each}}
+		</script>
+		<script type="text/javascript" src="/libs/requirejs/require.js" data-main="/js/list.js"></script>
+	</body>
+
+</html>

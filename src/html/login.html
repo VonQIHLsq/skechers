@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/login.css"/>
+	</head>
+	<body>
+		
+		<div id="header-container"></div>
+		
+		<div class="login-container">
+			<div class="login-left">
+				<div class="login-left-content">
+					<div class="border-bot">
+						<p>
+							<a href="#">密码登录</a>
+							<a href="#">验证码登录</a>
+						</p>
+					</div>
+					<form method="get" action="/php/login.php">
+						<input type="text" name="username" id="username" placeholder="请输入您的姓名" />
+						<input type="password" name="password" id="password" placeholder="请输入您的密码" />
+						<span></span>
+						<p>忘记密码？</p>
+						<button id="login">登录</button>
+					</form>
+					<div class="login-another">
+						<p>或通过以下方式快速登录：</p>
+						<p>
+							<a href="#"><img src="/images/wx.png"/></a>
+							<a href="#"><img src="/images/qq.png"/></a>
+							<a href="#"><img src="/images/wb.png"/></a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="register">
+				<p>还不是斯凯奇会员?</p>
+				<p>立即注册，享无限惊喜。</p>
+				<p>· 第一时间接收新品发布及活动折扣信息</p>
+				<p>· 享受SKECHERS的贴心服务</p>
+				<button id="register">注册</button>
+			</div>
+		</div>
+		<div id="footer-container"></div>
+		<div class="topback"></div>
+		<script type="text/javascript" src="/libs/requirejs/require.js" data-main="/js/login.js"></script>
+	</body>
+</html>

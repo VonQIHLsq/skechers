@@ -1,0 +1,140 @@
+@import "module/style";
+@import "module/headfoot";
+@import "module/recommond";
+
+main{
+    width: 100%;
+    min-height: 700px;
+    margin-top: 90px;
+    overflow:hidden;
+    .left{
+        width: 19%;
+        float: left;
+        padding: 0 15px;
+        .left-color{
+            height: 195px;
+            border-bottom: 1px solid #c5c5c5;
+        }
+        h3{
+            font-size: 20px;
+        }
+    }
+}
+
+.left-color p,
+.left-caty p{
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.left-color p span:nth-child(2),
+.left-caty p span:nth-child(2){
+    font-size: 40px;
+}
+.left-color ul li{
+    float: left;
+    margin-right: 19px;
+    margin-bottom: 19px;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background: red;
+}
+.left-color ul li:nth-child(1){
+    background-color: #000;
+}
+.left-color ul li:nth-child(6),
+.left-color ul li:nth-child(12){
+    margin-right: 0;
+}
+.left-caty{
+    height: 440px;
+    border-bottom: 1px solid #c5c5c5;
+}
+.left-caty ul{
+    font-size: 14px;
+    color: $color;
+    line-height: 30px;
+}
+.left-caty ul li{
+    display: flex;
+    align-items: center;
+}
+.left-caty ul li span{
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    border: 1px solid #c9caca;
+    margin-right: 10px;
+}
+
+
+.right{
+    width: 77.5%;
+    float: right;
+}
+.right h2{
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+.right .s{
+    overflow: hidden;
+}
+.right .s span{
+    width: 110px;
+    height: 38px;
+    border: 1px solid #c5c5c5;
+    font-size: 14px;
+    line-height: 38px;
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.right .s span:nth-child(1),
+.right .s span:nth-child(2){
+    float: left;
+}
+.right .s span:nth-child(2){
+    margin-left: 30px;
+}
+.right span:nth-child(3){
+    float: right;
+    margin-right: 25px;
+}
+.right span em{
+    display: block;
+    width: 12px;
+    height: 7px;
+    background: url(/images/jt.png) no-repeat;
+    position: absolute;
+    top: 17px;
+    right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

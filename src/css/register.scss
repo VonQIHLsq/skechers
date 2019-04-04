@@ -1,0 +1,146 @@
+@import "module/style";
+@import "module/headfoot";
+.register{
+    width: 100%;
+    height: 700px;
+    margin: 30px 0 36px;
+}
+.register .register-left{
+    float: left;
+    width: 46.5%;
+    height: 665px;
+    border-right: 1px solid #333;
+    padding-top: 35px;
+}
+.register-left .register-container{
+    width: 432px;
+    margin-left: 17%;
+}
+.register-container p.huiyuan{
+    width: 314px;
+    padding-left: 60px;
+    background: url(/images/huiyuan.png) no-repeat;
+    background-size: 45px 45px;
+    color: #333;
+    line-height: 22px;
+    margin-bottom: 24px;
+}
+.register-container p a{
+    color: #0065b4;
+    text-decoration: underline;
+}
+.register-container form{
+    position: relative;
+    text-align: center;
+}
+.register-container form input{
+    width: 426px;
+    height: 35px;
+    border: 2px solid #808080;
+    padding-left: 5px;
+    font-size: 17px;
+    color: #757575;
+    margin-bottom: 24px;
+}
+.register-container form input:nth-child(3){
+    margin-bottom: 10px;
+}
+.register-container form span.look{
+    position: absolute;
+    top: 200px;
+    right: 5px;
+    width: 29px;
+    height: 19px;
+    background: url(/images/ear.png) no-repeat;
+}
+.register-container form p.care{
+    color: #333;
+    text-align: left;
+}
+.register-container form p.requ{
+    font-size: 14px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+.register-container form p.requ span{
+    float: left;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #000;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+.register-container form p.requ a{
+    color: #191919;
+    text-underline-position: under;
+}
+.register-container form button.register1{
+    width: 129px;
+    height: 39px;
+    background-color: $bgcolor;
+    color: #fff;
+    border: none;
+    font-size: 17px;
+    margin: 25px 0 58px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+.register-container .login-another{
+    width: 168px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #333;
+}
+.register-container p:nth-child(2){
+    display: flex;justify-content: space-around;
+    margin-top: 15px;
+}
+.register-container .backlogin{
+    font-size: 14px;
+    margin-left: 22px;
+    margin-top: 38px;
+    line-height: 25px;
+}
+.register-container .backlogin button{
+    font-size: 17px;
+    width: 111px;
+    height: 37px;
+    background-color: $bgcolor;
+    color: #fff;
+    border: none;
+    float: right;
+    border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.register .register-right{
+    float: left;
+    width: 44.3%;
+    height: 465px;
+    padding-top: 40px;
+    margin-left: 6.5%;
+}
+.register .register-right img{
+    width: 95%;
+}

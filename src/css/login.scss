@@ -1,0 +1,126 @@
+@import "module/style";
+@import "module/headfoot";
+
+
+.login-container{
+    width: 100%;
+    height: 505px;
+    margin: 30px 0 36px;
+}
+.login-container .login-left{
+    float: left;
+    width: 51.3%;
+    height: 470px;
+    border-right: 1px solid #333;
+    padding-top: 35px;
+}
+.login-left-content{
+    width: 462px;
+    margin-left: 17%;
+}
+.login-left-content .border-bot{
+    width: 452px;
+    margin: 0 auto;
+    border-bottom: 1px solid #b0b0b0;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 31px;
+}
+.border-bot p{
+    width: 265px;
+    display: flex;
+    justify-content: center;
+}
+.border-bot p a{
+    padding: 0 20px;
+    height: 45px;
+    color: #333;
+    text-align: center;
+}
+.border-bot p a:nth-child(1){
+    border-bottom: 3px solid #022d53;
+}
+//.border-bot p a:hover{
+//  border-bottom: 3px solid #022d53;
+//}
+.login-container form{
+    position: relative;
+    text-align: center;
+    margin-bottom: 66px;
+}
+.login-container form input{
+    width: 456px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #b0b0b0;
+    padding-left: 4px;
+    font-size: 17px;
+    color: #9e9e9e;
+}
+.login-container form input:nth-child(2){
+    margin: 24px 0 22px;
+}
+.login-container form span{
+    position: absolute;
+    top: 70px;
+    right: 5px;
+    width: 29px;
+    height: 19px;
+    background: url(/images/ear.png) no-repeat;
+}
+.login-container form p{
+    text-align: right;
+}
+.login-container form button{
+    width: 124px;
+    height: 39px;
+    background-color: $bgcolor;
+    color: #fff;
+    border: none;
+    font-size: 17px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+.login-container .login-another{
+    width: 168px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #333;
+}
+.login-another p:nth-child(2){
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+
+
+.login-container .register{
+    float: left;
+    width: 42%;
+    height: 505px;
+    margin-left: 6.5%;
+}
+.login-container .register p{
+    font-size: 16px;
+    line-height: 30px;
+}
+.login-container .register p:nth-child(1){
+    margin: 110px 0 15px;
+}
+.register p:nth-child(3),
+.register p:nth-child(4){
+    line-height: 35px;
+}
+.register button{
+    width: 147px;
+    height: 38px;
+    background-color: $bgcolor;
+    font-size: 15px;
+    color: #FFFFFF;
+    cursor: pointer;
+    border: none;
+    margin-top: 40px;
+}
+

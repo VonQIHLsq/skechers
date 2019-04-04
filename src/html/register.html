@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/register.css"/>
+	</head>
+	<body>
+		<div id="header-container"></div>
+		
+		
+		<div class="register">
+			<div class="register-left">
+				<div class="register-container">
+					<p class="huiyuan">如您已通过斯凯奇微信公众号注册S-CLUB，
+无需注册，<a href="#">点击这里</a>，可直接登录购物。</p>
+					<form method="get" action="/php/register.php">
+						<input type="text" name="username" id="username" placeholder="姓名*" />
+						<!--<input type="number" name="num" id="num" placeholder="手机号码*" />
+						<input type="number" name="renum" id="renum" placeholder="手机验证码*" /><button>获取验证码</button>-->
+						<input type="password" name="password" id="password" placeholder="密码*" />
+						<input type="password" name="repassword" id="repassword" placeholder="确认密码*" />
+						<span class="look"></span>
+						<p class="care">*为必填项，请留意。</p>
+						<p class="requ">
+							<span></span>
+							我接受<a href="#">斯凯奇官网服务协议</a>,<a href="#"> 隐私权政</a>策及通知类邮件
+						</p>
+						<button class="register1" id="register">注册</button>
+					</form>
+					<div class="login-another">
+						<p>或通过以下方式快速登录：</p>
+						<p>
+							<a href="#"><img src="/images/wx.png"/></a>
+							<a href="#"><img src="/images/qq.png"/></a>
+							<a href="#"><img src="/images/wb.png"/></a>
+						</p>
+					</div>
+					
+					<p class="backlogin">
+						<span>已是斯凯奇会员?</span>
+						<button id="login">登录</button>
+					</p>
+				</div>
+				
+			</div>
+			<div class="register-right">
+				<a href="#">
+					<img src="/images/640.jpg"/>
+				</a>
+			</div>
+		</div>
+		<div id="footer-container"></div>
+	<script type="text/javascript" src="/libs/requirejs/require.js" data-main="/js/register.js"></script>	
+	</body>
+</html>

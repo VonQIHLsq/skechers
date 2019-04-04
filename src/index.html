@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/index.css" />
+		<link rel="stylesheet" type="text/css" href="/libs/swiper/css/swiper.css" />
+	</head>
+
+	<body>
+		<!--头部的空容器-->
+		<div id="header-container"></div>
+
+		<!--轮播图-->
+		<div class="swiper-container banner">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="/images/banner1.jpg" /></div>
+				<div class="swiper-slide"><img src="/images/banner2.jpg" /></div>
+				<div class="swiper-slide"><img src="/images/banner3.jpg" /></div>
+			</div>
+			<!-- 如果需要分页器 -->
+			<div class="swiper-pagination swiper-pagination-black"></div>
+
+			<!-- 如果需要导航按钮 -->
+			<div class="swiper-button-prev swiper-button-white"></div>
+			<div class="swiper-button-next swiper-button-white"></div>
+
+		</div>
+
+		<main>
+			<div class="mian-container">
+				<div class="kinds">
+					<div class="kinds-title">
+						<a href="#">3.27-3.31实付满499送鞋收纳袋，满699送手机支架，数量有限，抢完即止</a>
+					</div>
+					<!--首页中分类展示的容器-->
+					<ul id="catyListContainer"></ul>
+				</div>
+				<div class="bobs">
+					<a href="#">
+						<img src="/images/3-1-pc.jpg" />
+					</a>
+				</div>
+				<div class="kids">
+					<a href="#">
+						<img src="/images/3-2-pc.jpg" />
+					</a>
+				</div>
+				<div class="newHot">
+					<h2>NEW 新品</h2>
+					<ul>
+						<li>
+							<a href="#">
+								<p>D'LITES 2.0</p>
+								<p>立即选购 ></p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<p>D'LITES 2.0</p>
+								<p>立即选购 ></p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<p>D'LITES 2.0</p>
+								<p>立即选购 ></p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<p>D'LITES 2.0</p>
+								<p>立即选购 ></p>
+							</a>
+						</li>
+					</ul>
+					<h2>HOT 热卖</h2>
+					<ul>
+						<li>
+							<a href="#">
+								<p>D'LITES 2.0</p>
+								<p>立即选购 ></p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<p>D'LITES 2.0</p>
+								<p>立即选购 ></p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<p>D'LITES 2.0</p>
+								<p>立即选购 ></p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<p>D'LITES 2.0</p>
+								<p>立即选购 ></p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</main>
+		<div class="nason">
+			<div class="nason-container">
+				<ul id="nason-container">
+					<li>
+						<a href="#">
+							<p>MARK NASON</p>
+							<p>设计师系列 ></p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<p>D'LITES</p>
+							<p>复古潮流 ></p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<p>KIDS</p>
+							<p>儿童 ></p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<p>女子服饰</p>
+							<p>男子服饰</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="look">
+			<p>查看所有商品</p>
+		</div>
+
+		<!--尾部的空容器div-->
+		<div id="footer-container"></div>
+
+		<!--返回头部的箭头-->
+		<div class="topback"></div>
+
+		<script type="text/html" id="catyList">
+			{{each type item }}
+			<li>
+				<a href="/html/list.html?type={{item.type}}&title={{item.title}}">
+					<p>{{item.name1}}</p>
+					<p>{{item.name2}} ></p>
+				</a>
+			</li>
+			{{/each}}
+		</script>
+
+		<script type="text/javascript" src="/libs/requirejs/require.js" data-main="/js/index.js"></script>
+	</body>
+
+</html>

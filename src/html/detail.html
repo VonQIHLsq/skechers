@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/detail.css" />
+	</head>
+
+	<body>
+		<div id="header-container"></div>
+
+		<main>
+			<div class="detail">
+				<div class="d-left">
+					<div class="view_thumbs" id="gal1">
+						<ul class="view-ul">
+							<li class="current">
+								<a href="#" data-image="/images/color_wht_1.jpg" data-zoom-image="/images/color_wht_1.jpg"></a>
+								<img class="s" src="/images/color_wht_1.jpg" />
+							</li>
+							<li>
+								<a href="#" data-image="/images/color_wht_2.jpg" data-zoom-image="/images/color_wht_2.jpg"></a>
+								<img class="s" src="/images/color_wht_2.jpg" />
+							</li>
+							<li>
+								<a href="#" data-image="/images/color_wht_3.jpg" data-zoom-image="/images/color_wht_3.jpg"></a>
+								<img class="s" src="/images/color_wht_3.jpg" />
+							</li>
+							<li>
+								<a href="#" data-image="/images/color_wht_4.jpg" data-zoom-image="/images/color_wht_4.jpg"></a>
+								<img class="s" src="/images/color_wht_4.jpg" />
+							</li>
+							<li>
+								<a href="#" data-image="/images/color_wht_5.jpg" data-zoom-image="/images/color_wht_5.jpg"></a>
+								<img class="s" src="/images/color_wht_5.jpg" />
+							</li>
+						</ul>
+					</div>
+					<div class="view_bd">
+						<img class="zoom-img" src="/images/color_wht_1.jpg" data-zoom-image="/images/color_wht_1.jpg" />
+					</div>
+				</div>
+				
+				<!--右边详情的容器，用模板引擎渲染-->
+				<div class="d-right" id="catyListContainer"></div>
+			</div>
+
+			<div class="title">
+				<div class="title-left">
+					<img src="/images/color_wht_1.jpg" />
+				</div>
+				<div class="title-right">
+					<h2>经典时尚，出众潮感</h2>
+					<p>D'LITES系列时尚绑带运动鞋：全新一代D'LITES鞋底，鞋底采用EVA/橡胶材料，鞋底由丰富的D'LITES基因与潮流廓型线条的经典结合，碰撞出全新的潮流鞋款</p>
+					<h3>轻质吸震</h3>
+					<p>廓型鞋底设计，鞋底采用EVA/橡胶材料，轻质吸震，穿着舒适，</p>
+					<h3>修饰腿型</h3>
+					<p>时尚潮流，高底台设计，即刻增高，修饰腿部线条，提高搭配度</p>
+					<h3>潮流个性</h3>
+					<p>鞋面采用网布结合皮革，系带款搭载脚背魔术贴搭带设计，融入篮球鞋的原色，但又不失时尚，搭带上的SKECHERS LOGO以刺绣方式呈现，质感十足</p>
+					<h3>舒适支持</h3>
+					<p>使用AIR-COOLED记忆鞋垫，集合SKECHERS 多种鞋垫技术，提供更好的舒适、支持</p>
+					<p class="title-small">敬请注意，同款但不同配色的商品有可能在材质等方面存在些许差异；商品图片均为官方拍摄，手机或电脑等其他显示设备可能会造成色差；页面显示的尺码数据均为手工测量，与收到商品可能存在一定的误差值属于正常情况；本页面中的商品介绍内容仅供参考，商品具体信息请以收到的实物为准。另，内衣类商品不提供试穿服务，商品一经签收无质量问题不提供退换货服务，给您造成的不便望您谅解。</p>
+				</div>
+			</div>
+			<div class="recommond right">
+				<h3><img src="/images/dianzan.png"/>为您推荐</h3>
+				<dl>
+					<dt>
+						<a href="/html/detail.html">
+							<img src="/images/color_pur_1.jpg"/>
+							
+							<span class="col">4色</span>
+						</a>
+					</dt>
+					<dd>
+						<p>D'LITES 3.0</p>
+						<p>男女同款时尚运动鞋</p>
+						<p>¥649.00</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<a href="/html/detail.html">
+							<img src="/images/color_pur_1.jpg"/>
+							
+							<span class="col">4色</span>
+						</a>
+					</dt>
+					<dd>
+						<p>D'LITES 3.0</p>
+						<p>男女同款时尚运动鞋</p>
+						<p>¥649.00</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<a href="/html/detail.html">
+							<img src="/images/color_pur_1.jpg"/>
+							
+							<span class="col">4色</span>
+						</a>
+					</dt>
+					<dd>
+						<p>D'LITES 3.0</p>
+						<p>男女同款时尚运动鞋</p>
+						<p>¥649.00</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<a href="/html/detail.html">
+							<img src="/images/color_pur_1.jpg"/>
+							
+							<span class="col">4色</span>
+						</a>
+					</dt>
+					<dd>
+						<p>D'LITES 3.0</p>
+						<p>男女同款时尚运动鞋</p>
+						<p>¥649.00</p>
+					</dd>
+				</dl>
+			</div>
+		</main>
+
+		<div id="footer-container"></div>
+
+		<script type="text/html" id="catyList">
+			{{each xq item}}
+			<div class="d-right-name">
+				<img src="../images/zhengjia.png" />
+				<p>{{item.engname}}</p>
+				<p>{{item.name}}</p>
+				<p>¥{{item.price}}.00</p>
+			</div>
+			<div class="xq">
+				<p>货号： {{item.phone}}</p>
+				<p>颜色 : {{item.color}}</p>
+				<ul>
+					<li>
+						<img class="s" src="/images/color_wht_1.jpg" />
+					</li>
+					<li>
+						<img class="s" src="/images/color_wht_1.jpg" />
+					</li>
+					<li>
+						<img class="s" src="/images/color_wht_1.jpg" />
+					</li>
+				</ul>
+				<div class="sN">
+					<div class="size">
+						尺码
+						<span></span>
+					</div>
+					<div class="num">
+						<a href="javascript:;">-</a>
+						<input type="text" value="1" />
+						<a href="javascript:;">+</a>
+					</div>
+				</div>
+				<a href="#" class="xq-size">尺码对照表</a>
+
+				<div class="cart">
+					<a href="javascript:;">加入购物车</a>
+					<a href="javascript:;">立即购买</a>
+				</div>
+				<div class="share">
+					<a href="#">分享</a>
+					<a href="#">手机购买</a>
+				</div>
+			</div>
+			{{/each}}
+		</script>
+		<script type="text/javascript" src="/libs/requirejs/require.js" data-main="/js/detail.js"></script>
+	</body>
+
+</html>

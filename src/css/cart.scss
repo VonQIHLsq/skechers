@@ -1,0 +1,164 @@
+@import "module/style";
+@import "module/headfoot";
+main{
+    
+}
+main .top-img{
+    width: 1125px;
+    margin: 50px auto 80px;
+}
+main .main-cart{
+    width: 1125px;
+    height: 437px;
+    margin: 0 auto;
+    .cart-left{
+        width: 705px;
+        float: left;
+        p{
+            line-height: 60px;
+            border-bottom: 1px solid #b1b1b2;
+            padding-left: 25px;
+            font-size: 20px;
+        }
+    }
+    .cart-left-c{
+        width: 728px;
+        float: left;
+        h4{
+            line-height: 60px;
+            font-size: 20px;
+            font-weight: normal;
+        }
+        .cart-shop{
+            height: 173px;
+            border: 1px solid #b1b1b2;
+            dt{
+                float: left;
+                margin-right: 20px;
+                img{
+                    width: 160px;
+                }
+            }
+            dd{
+                width: 532px;
+                height: 173px;
+                float: left;
+                p{
+                    font-size: 14px;
+                    &:nth-child(1){
+                        font-size: 16px;
+                        margin-top: 12px;
+                        line-height: 20pxd;
+                        span{
+                            font-size: 15px;
+                            font-weight: bold;
+                            float: right;
+                        }
+                    }
+                    &:nth-child(3) {
+                        line-height: 50px;
+                        span{
+                            margin-right: 68px;
+                        }
+                    }
+                    
+                    &:nth-child(4){
+                        line-height: 70px;
+                        span{
+                            text-decoration: underline;
+                            &:nth-child(2){
+                                float: right;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    .cart-right{
+        width: 325px;
+        height: 398px;
+        box-sizing: border-box;
+        float: left;
+        margin-left: 35px;
+        background-color: #444;
+        padding: 24px;
+        color: #fff;
+        h4{
+            line-height: 42px;
+            border-bottom: 1px solid #9c9c9c;
+            font-size: 20px;
+            font-weight: normal;
+        }
+        .youhui{
+            height: 110px;
+            border-bottom: 1px solid #4c4c4c;
+            p{
+                line-height: 50px;
+            }
+            input{
+                float: left;
+                width: 213px;
+                height: 40px;
+                border: none;
+                border-radius: 2px;
+                font-size: 12px;
+                color: #757575;
+                line-height: 40px;
+                padding-left: 5px;
+            }
+            button{
+                float: right;
+                width: 40px;
+                height: 40px;
+                background: url(/images/right.png) no-repeat;
+                border: none;
+            }
+        }
+        .num{
+            height: 85px;
+            border-bottom: 1px solid #4c4c4c;
+            p{
+                line-height: 40px;
+                span{
+                    float: right;
+                }
+            }
+        }
+        .cart-pay{
+            height: 109px;
+            p{
+                line-height: 50px;
+                margin-bottom: 18px;
+                font-size: 20px;
+                span{
+                    float: right;
+                }
+            }
+            button{
+                width: 278px;
+                height: 41px;
+                background-color: #fff;
+                border: none;
+                text-align: center;
+                line-height: 41px;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
