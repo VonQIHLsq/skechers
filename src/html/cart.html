@@ -1,67 +1,113 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="/css/cart.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/cart.css" />
 	</head>
+
 	<body>
 		<div id="header-container"></div>
-		
+
 		<main>
 			<div class="top-img">
-				<img src="/images/cart.jpg"/>
+				<img src="/images/cart.jpg" />
 			</div>
 			<div class="main-cart">
-				<!--<div class="cart-left">
+				<div class="cart-left" id="cartNone">
 					<p>您的购物车里没有商品</p>
-				</div>-->
-				<div class="cart-left-c">
-					<h4>您的购物车（<span>1</span>件）</h4>
-					<div class="cart-shop">
-						<dl>
-							<dt>
-								<img src="/images/color_wht_1.jpg"/>
-							</dt>
-							<dd>
-								<p>D'LITES 3.0<span>¥649.00</span></p>
-								<p>款号: 88888335-WHT9</p>
-								<p>
-									<span>颜色: 白色</span>
-									<span>尺码: 39</span>
-									<span>数量: 1</span>
-								</p>
-								<p>
-									<span>删除</span>
-									<span>编辑</span>
-								</p>
-							</dd>
-						</dl>
-					</div>
 				</div>
+				<!--渲染购物车商品的容器-->
+				<div class="cart-left-c" id="cartShoes"></div>
+				
 				<div class="cart-right">
 					<h4>小结信息</h4>
 					<div class="youhui">
 						<p>是否有优惠码？</p>
-						<input type="text" placeholder="选择或输入优惠码"/>
+						<input type="text" placeholder="选择或输入优惠码" />
 						<button></button>
 					</div>
 					<div class="num">
-						<p>商品总额：<span>￥0.00</span></p>
-						<p>运费总额：<span>-</span></p>
+						<p>商品总额：<span id="allMoneyBox">￥0.00</span></p>
+						<p>运费总额：<span id="fareMoney">-</span></p>
 					</div>
 					<div class="cart-pay">
-						<p>支付总额：<span>￥0.00</span></p>
-						<button>提交订单</button>
+						<p>支付总额：<span id="payMoneyBox">￥0.00</span></p>
+						<button id="offerOrder">提交订单</button>
 					</div>
 				</div>
 			</div>
 		</main>
-		
-		
-		
-		
+		<!--返回头部的箭头-->
+		<div class="topback" id="topback"></div>
 		<div id="footer-container"></div>
+
+		<script type="text/html" id="cartContainer">
+			<h4>全选：<input type="checkbox" checked class="allCheck">您的购物车（<span id="yourCart">1</span>件）</h4>
+			<div class="cart-shop">
+				{{each cart item}}
+				<dl>
+					<dt>
+						<input type="checkbox" class="checkbox">
+						<img src="/images/color_wht_1.jpg"/>
+					</dt>
+					<dd class="d-edit" cartId="{{item.id}}">
+						<p>{{item.engname}}<span>¥<b>{{item.price}}.00</b></span></p>
+						<p>款号: {{item.phone}}</p>
+						<p>
+							颜色: <span class="itemColor">{{item.color}}</span>
+							尺码: <span class="itemSize">{{item.size}}</span>
+							数量: <span class="itemNum">{{item.num}}</span>
+						</p>
+						<p>
+							<span class="del">删除</span>
+							<span class="edit">编辑</span>
+						</p>
+					</dd>
+					<dd class="d-save" cartId="{{item.id}}">
+						<p>{{item.engname}}<span>¥{{item.price}}.00</span></p>
+						<p>款号: {{item.phone}}</p>
+						<p>
+							<span>颜色 : </span>
+							<span>尺码 : </span>
+							<span>数量 : </span>
+						</p>
+						<p>
+							<select class="shopColor">
+								<option value="黑色">黑色</option>
+								<option value="白色">白色</option>
+								<option value="军绿色">军绿色</option>
+							</select>
+							<select class="shopSize">
+								<option value="360">36</option>
+								<option value="365">36.5</option>
+								<option value="370">37</option>
+								<option value="375">37.5</option>
+								<option value="380">38</option>
+								<option value="385">38.5</option>
+								<option value="390">39</option>
+								<option value="395">39.5</option>
+								<option value="400">40</option>
+								<option value="405">40.5</option>
+								<option value="410">41</option>
+								<option value="415">41.5</option>
+								<option value="420">42</option>
+							</select>
+							<span>
+								<button class="prevSub">-</button>
+								<b class="shopNum">1</b>
+								<button class="nextAdd">+</button>
+							</span>
+						</p>
+						<p class="shopSave">保存</p>
+					</dd>
+				</dl>
+				{{/each}}
+			</div>
+		</script>
+
 		<script type="text/javascript" src="/libs/requirejs/require.js" data-main="/js/cart.js"></script>
 	</body>
+
 </html>

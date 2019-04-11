@@ -57,41 +57,18 @@
 					</ul>
 				</div>
 			</div>
-			<div class="right" id="catyListContainer">
-				<h2>"所有男子"（824）</h2>
-				<div class="s">
-					<span>价格<em></em></span>
-					<span>尺码<em></em></span>
-					<span>排列方式<em></em></span>
-				</div>
-
-				<!--<dl>
-					<dt>
-						<a href="/html/detail.html">
-							<img src="/images/color_pur_1.jpg"/>
-							<div class="zj">
-								<img src="/images/zhengjia.png"/>
-							</div>
-							<span class="col">4色</span>
-						</a>
-					</dt>
-					<dd>
-						<p>D'LITES 3.0</p>
-						<p>男女同款时尚运动鞋</p>
-						<p>¥649.00</p>
-					</dd>
-				</dl>-->
-			</div>
+			<div class="right" id="catyListContainer"></div>
 		</main>
-
+		<!--返回头部的箭头-->
+		<div class="topback" id="topback"></div>
 		<div id="footer-container"></div>
 
 		<script type="text/html" id="catyList">
 
 			<h2 id="listTitle">"所有男子"（824）</h2>
 			<div class="s">
-				<span>价格<em></em></span>
-				<span>尺码<em></em></span>
+				<span id="priceDown">价格由高到低<em></em></span>
+				<span id="priceUp">价格由低到高<em></em></span>
 				<span>排列方式<em></em></span>
 			</div>
 			{{each list item}}

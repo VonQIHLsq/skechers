@@ -1,82 +1,166 @@
 @import "module/style";
 @import "module/headfoot";
-main{
-    
+main {
+    min-height: 800px;
+    overflow: hidden;
+    margin-bottom: 20px;
 }
-main .top-img{
+main .top-img {
     width: 1125px;
     margin: 50px auto 80px;
 }
-main .main-cart{
+main .main-cart {
     width: 1125px;
-    height: 437px;
+    min-height: 437px;
     margin: 0 auto;
-    .cart-left{
+    .cart-left {
         width: 705px;
         float: left;
-        p{
+        display: none;
+        p {
             line-height: 60px;
             border-bottom: 1px solid #b1b1b2;
             padding-left: 25px;
             font-size: 20px;
         }
     }
-    .cart-left-c{
+    .cart-left-c {
         width: 728px;
         float: left;
-        h4{
+        input{
+            width: 20px;
+            height: 20px;
+            margin-right: 50px;
+            line-height: 20px;
+        }
+        h4 {
             line-height: 60px;
             font-size: 20px;
             font-weight: normal;
         }
-        .cart-shop{
-            height: 173px;
-            border: 1px solid #b1b1b2;
-            dt{
-                float: left;
-                margin-right: 20px;
-                img{
-                    width: 160px;
-                }
-            }
-            dd{
-                width: 532px;
+        .cart-shop {
+            //min-height: 173px;
+            dl {
                 height: 173px;
-                float: left;
-                p{
-                    font-size: 14px;
-                    &:nth-child(1){
-                        font-size: 16px;
-                        margin-top: 12px;
-                        line-height: 20pxd;
-                        span{
-                            font-size: 15px;
-                            font-weight: bold;
-                            float: right;
-                        }
+                border: 1px solid #b1b1b2;
+                margin-top: -1px;
+                dt {
+                    float: left;
+                    margin-right: 20px;
+                    position: relative;
+                    img {
+                        width: 160px;
+                        margin-left: 50px;
                     }
-                    &:nth-child(3) {
-                        line-height: 50px;
-                        span{
-                            margin-right: 68px;
-                        }
+                    input{
+                        margin-left: 15px;
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -10px;
                     }
-                    
-                    &:nth-child(4){
-                        line-height: 70px;
-                        span{
-                            text-decoration: underline;
-                            &:nth-child(2){
+                }
+                dd {
+                    width: 450px;
+                    height: 173px;
+                    float: left;
+                    &.d-edit p {
+                        font-size: 14px;
+                        &:nth-child(1) {
+                            font-size: 16px;
+                            margin-top: 12px;
+                            line-height: 25px;
+                            span {
+                                font-size: 15px;
+                                font-weight: bold;
                                 float: right;
                             }
                         }
+                        &:nth-child(3) {
+                            line-height: 50px;
+                            span {
+                                margin-right: 68px;
+                            }
+                        }
+                        &:nth-child(4) {
+                            line-height: 70px;
+                            span {
+                                cursor: pointer;
+                                text-decoration: underline;
+                                &:nth-child(2) {
+                                    float: right;
+                                }
+                            }
+                        }
                     }
-                    
+                    &.d-save{
+                        display: none;
+                        position: relative;
+                       p{
+                            font-size: 14px;
+                            &:nth-child(1) {
+                                width: 400px;
+                                font-size: 16px;
+                                margin-top: 12px;
+                                line-height: 25px;
+                                span {
+                                    font-size: 15px;
+                                    font-weight: bold;
+                                    float: right;
+                                }
+                            }
+                            &:nth-child(3) {
+                                margin-top: 20px;
+                                margin-left: 10px;
+                                span {
+                                    margin-right: 78px;
+                                }
+                            }
+                            &:nth-child(4) {
+                                margin-top: 15px;
+                                
+                                select {
+                                    margin-right: 30px;
+                                    cursor: pointer;
+                                    background-color: #444;
+                                    color: #fff;
+                                    width: 74px;
+                                    height: 28px;
+                                    border: none;
+                                }
+                                span{
+                                    button{
+                                        width: 28px;
+                                        height: 28px;
+                                        background-color: #444;
+                                        color: #fff;
+                                        font-size: 18px;
+                                        border: none;
+                                    }
+                                    b{
+                                        margin: 0 5px;
+                                    }
+                                }
+                            }
+                            &:nth-child(5){
+                                position: absolute;
+                                right: -46px;
+                                top: 0;
+                                width: 70px;
+                                height: 173px;
+                                background-color: #444;
+                                color: #fff;
+                                text-align: center;
+                                line-height: 173px;
+                                font-size: 20px;
+                                cursor: pointer;
+                            }
+                        }  
+                    } 
                 }
             }
         }
     }
-    .cart-right{
+    .cart-right {
         width: 325px;
         height: 398px;
         box-sizing: border-box;
@@ -85,19 +169,19 @@ main .main-cart{
         background-color: #444;
         padding: 24px;
         color: #fff;
-        h4{
+        h4 {
             line-height: 42px;
             border-bottom: 1px solid #9c9c9c;
             font-size: 20px;
             font-weight: normal;
         }
-        .youhui{
+        .youhui {
             height: 110px;
             border-bottom: 1px solid #4c4c4c;
-            p{
+            p {
                 line-height: 50px;
             }
-            input{
+            input {
                 float: left;
                 width: 213px;
                 height: 40px;
@@ -108,35 +192,35 @@ main .main-cart{
                 line-height: 40px;
                 padding-left: 5px;
             }
-            button{
+            button {
                 float: right;
                 width: 40px;
                 height: 40px;
-                background: url(/images/right.png) no-repeat;
+                background: url("/images/right.png") no-repeat;
                 border: none;
             }
         }
-        .num{
+        .num {
             height: 85px;
             border-bottom: 1px solid #4c4c4c;
-            p{
+            p {
                 line-height: 40px;
-                span{
+                span {
                     float: right;
                 }
             }
         }
-        .cart-pay{
+        .cart-pay {
             height: 109px;
-            p{
+            p {
                 line-height: 50px;
                 margin-bottom: 18px;
                 font-size: 20px;
-                span{
+                span {
                     float: right;
                 }
             }
-            button{
+            button {
                 width: 278px;
                 height: 41px;
                 background-color: #fff;
@@ -148,17 +232,3 @@ main .main-cart{
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

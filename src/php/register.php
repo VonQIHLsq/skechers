@@ -2,8 +2,8 @@
 	header("Access-Control-Allow-Origin:*");
 	
 	include("db.php");
-	$username = $_GET["username"];
-	$password = $_GET["password"];
+	$username = $_POST["username"];
+	$password = $_POST["password"];
 
 	// 不允许重复注册
 	$selSql = "select * from users where username = '$username'";

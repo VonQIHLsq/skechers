@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/order.css" />
+	</head>
+
+	<body>
+		<div id="header-container"></div>
+
+		<main>
+			<div class="main-left">
+				<h3>收货信息</h3>
+				<div class="left-content">
+					<p>
+						<input type="text" placeholder="收货人* :" />
+						<input type="text" placeholder="手机号码* :" />
+					</p>
+					<p>
+						<input type="text" placeholder="省份* :" />
+						<input type="text" placeholder="城市* :" />
+						<input type="text" placeholder="区/县* :" />
+					</p>
+					<p>
+						<input type="text" placeholder="详细地址* :" />
+					</p>
+					<p>
+						<span>取消</span>
+						<span>保存</span>
+					</p>
+				</div>
+			</div>
+			<!--存放右边订单的容器盒子-->
+			<div class="main-right" id="orderContainer"></div>
+		</main>
+		<!--返回头部的箭头-->
+		<div class="topback" id="topback"></div>
+		<div id="footer-container"></div>
+
+		<script type="text/html" id="xqOrder">
+			<h4>小结信息</h4>
+			<div class="youhui">
+				<b><span>0</span>件商品</b>
+				{{each order item}}
+				<dl>
+					<dt>
+						<img src="{{item.src}}"/>
+					</dt>
+					<dd>
+						<p>{{item.engname}}</p>
+						<p>{{item.name}}</p>
+						<p>¥{{item.price}}.00</p>
+						<p>数量: {{item.num}}</p>
+						<p>颜色: {{item.color}}</p>
+						<p>尺码: {{item.size}}</p>
+					</dd>
+				</dl>
+				{{/each}}
+			</div>
+			<div class="num">
+				<p>商品总额：<span id="allMoneyBox">￥0.00</span></p>
+				<p>运费总额：<span id="fareMoney">免邮</span></p>
+			</div>
+			<div class="cart-pay">
+				<p>支付总额：<span id="payMoneyBox">￥0.00</span></p>
+				<button id="offerOrder">提交</button>
+			</div>
+		</script>
+		<script type="text/javascript" src="/libs/requirejs/require.js" data-main="/js/order.js"></script>
+	</body>
+
+</html>

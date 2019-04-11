@@ -27,7 +27,7 @@ gulp.task("html", () => {
 })
 
 gulp.task("css", () => {
-  gulp.src("src/css/*.scss")
+  gulp.src("src/css/**/*.scss")
     .pipe(sass())
     .pipe(minifyCss())
     .pipe(gulp.dest("dist/css"))

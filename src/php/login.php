@@ -3,8 +3,8 @@
 	
 	include("db.php");
 	
-	$username = $_GET["username"];
-	$password = $_GET["password"];
+	$username = $_POST["username"];
+	$password = $_POST["password"];
 	
 	$sql = "select * from users where username='$username' and password='$password'";
 	//echo $sql;

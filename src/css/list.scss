@@ -85,14 +85,15 @@ main{
     overflow: hidden;
 }
 .right .s span{
-    width: 110px;
+    width: 135px;
     height: 38px;
     border: 1px solid #c5c5c5;
     font-size: 14px;
     line-height: 38px;
-    padding-left: 25px;
+    padding-left: 10px;
     position: relative;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 .right .s span:nth-child(1),
 .right .s span:nth-child(2){

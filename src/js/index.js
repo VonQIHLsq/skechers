@@ -1,5 +1,5 @@
 require(["require.config"],function(){
-	require(["jquery","Swiper","template","header","footer"],function($,Swiper,template){
+	require(["jquery","Swiper","template","header","footer","backtop"],function($,Swiper,template){
 		class Index{
 			constructor (){
 				this.swiper();
@@ -72,6 +72,47 @@ require(["require.config"],function(){
 						
 				 	}
 				})
+				
+				$.ajax({
+				 	url : "http://localhost/php/getlist1.php",
+				 	method : "GET",
+				 	dataType: "json",
+				 	success : (res)=> {
+				 		if(res.res_code === 1){
+				 			let list = res.res_list.data;
+				 			let arrList=[];
+				 			arrList=list.reduce((res,item)=>{
+				 				if(item.new=="new")  res.push(item);
+				 				return res;
+				 			},[])
+				 			var html = template("xqList", { list:arrList });
+				 			$("#newList").html(html);
+				 			
+				 			var $aA=$("#newList").children().children();
+				 			
+				 			for(let i=0;i<$aA.length;i++){
+				 				$aA[i].style.backgroundImage="url("+arrList[i].src+")";
+				 				$aA[i].href="/html/detail.html?id="+arrList[i].id;
+				 			}
+				 			
+				 			
+				 			let hotArr=list.reduce((res,item)=>{
+				 				if(item.hot=="hot")  res.push(item);
+				 				return res;
+				 			},[])
+				 			
+				 			$("#hotList").html(template("HotList", { list:hotArr }));
+				 			var $aA=$("#hotList").children().children();
+				 			
+				 			for(let i=0;i<$aA.length;i++){
+				 				$aA[i].style.backgroundImage="url("+hotArr[i].src+")";
+				 				$aA[i].href="/html/detail.html?id="+hotArr[i].id;
+				 			}
+				 		}
+						
+				 	}
+				})
+				
 			}
 		}
 		

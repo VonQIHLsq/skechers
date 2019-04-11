@@ -1,5 +1,5 @@
 require(["require.config"],function(){
-	require(["jquery","header","footer"],function($){
+	require(["jquery","header","footer","backtop"],function($){
 		function Register(){
 			this.init();
 		}

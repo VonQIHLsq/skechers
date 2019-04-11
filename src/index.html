@@ -13,19 +13,21 @@
 		<div id="header-container"></div>
 
 		<!--轮播图-->
-		<div class="swiper-container banner">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide"><img src="/images/banner1.jpg" /></div>
-				<div class="swiper-slide"><img src="/images/banner2.jpg" /></div>
-				<div class="swiper-slide"><img src="/images/banner3.jpg" /></div>
+		<div class="banner">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="/images/banner1.jpg" /></div>
+					<div class="swiper-slide"><img src="/images/banner2.jpg" /></div>
+					<div class="swiper-slide"><img src="/images/banner3.jpg" /></div>
+				</div>
+				<!-- 如果需要分页器 -->
+				<div class="swiper-pagination swiper-pagination-black"></div>
+
+				<!-- 如果需要导航按钮 -->
+				<div class="swiper-button-prev swiper-button-white"></div>
+				<div class="swiper-button-next swiper-button-white"></div>
+
 			</div>
-			<!-- 如果需要分页器 -->
-			<div class="swiper-pagination swiper-pagination-black"></div>
-
-			<!-- 如果需要导航按钮 -->
-			<div class="swiper-button-prev swiper-button-white"></div>
-			<div class="swiper-button-next swiper-button-white"></div>
-
 		</div>
 
 		<main>
@@ -49,59 +51,13 @@
 				</div>
 				<div class="newHot">
 					<h2>NEW 新品</h2>
-					<ul>
-						<li>
-							<a href="#">
-								<p>D'LITES 2.0</p>
-								<p>立即选购 ></p>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<p>D'LITES 2.0</p>
-								<p>立即选购 ></p>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<p>D'LITES 2.0</p>
-								<p>立即选购 ></p>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<p>D'LITES 2.0</p>
-								<p>立即选购 ></p>
-							</a>
-						</li>
-					</ul>
+
+					<!--新品渲染的盒子-->
+					<ul id="newList"></ul>
+
 					<h2>HOT 热卖</h2>
-					<ul>
-						<li>
-							<a href="#">
-								<p>D'LITES 2.0</p>
-								<p>立即选购 ></p>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<p>D'LITES 2.0</p>
-								<p>立即选购 ></p>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<p>D'LITES 2.0</p>
-								<p>立即选购 ></p>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<p>D'LITES 2.0</p>
-								<p>立即选购 ></p>
-							</a>
-						</li>
-					</ul>
+
+					<ul id="hotList"></ul>
 				</div>
 			</div>
 		</main>
@@ -143,7 +99,7 @@
 		<div id="footer-container"></div>
 
 		<!--返回头部的箭头-->
-		<div class="topback"></div>
+		<div class="topback" id="topback"></div>
 
 		<script type="text/html" id="catyList">
 			{{each type item }}
@@ -151,6 +107,28 @@
 				<a href="/html/list.html?type={{item.type}}&title={{item.title}}">
 					<p>{{item.name1}}</p>
 					<p>{{item.name2}} ></p>
+				</a>
+			</li>
+			{{/each}}
+		</script>
+
+		<script type="text/html" id="xqList">
+			{{each list item }}
+			<li>
+				<a href="#">
+					<p>{{item.engname}}</p>
+					<p>立即选购 ></p>
+				</a>
+			</li>
+			{{/each}}
+		</script>
+
+		<script type="text/html" id="HotList">
+			{{each list item }}
+			<li>
+				<a href="#">
+					<p>{{item.engname}}</p>
+					<p>立即选购 ></p>
 				</a>
 			</li>
 			{{/each}}

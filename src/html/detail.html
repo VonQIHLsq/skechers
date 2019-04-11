@@ -9,7 +9,8 @@
 
 	<body>
 		<div id="header-container"></div>
-
+		<!--点击尺码对照表后弹出来的半透明的大盒子-->
+		<div class="mask" id="mask"></div>
 		<main>
 			<div class="detail">
 				<div class="d-left">
@@ -44,6 +45,15 @@
 				
 				<!--右边详情的容器，用模板引擎渲染-->
 				<div class="d-right" id="catyListContainer"></div>
+			
+				
+				<!--点击尺码对照表后弹出的提示框-->
+				<div class="size-offer" id="sizeOffer">
+					<p id="close">X</p>
+					<img src="/images/size.png">
+				</div>
+			
+			
 			</div>
 
 			<div class="title">
@@ -64,67 +74,32 @@
 					<p class="title-small">敬请注意，同款但不同配色的商品有可能在材质等方面存在些许差异；商品图片均为官方拍摄，手机或电脑等其他显示设备可能会造成色差；页面显示的尺码数据均为手工测量，与收到商品可能存在一定的误差值属于正常情况；本页面中的商品介绍内容仅供参考，商品具体信息请以收到的实物为准。另，内衣类商品不提供试穿服务，商品一经签收无质量问题不提供退换货服务，给您造成的不便望您谅解。</p>
 				</div>
 			</div>
-			<div class="recommond right">
-				<h3><img src="/images/dianzan.png"/>为您推荐</h3>
-				<dl>
-					<dt>
-						<a href="/html/detail.html">
-							<img src="/images/color_pur_1.jpg"/>
-							
-							<span class="col">4色</span>
-						</a>
-					</dt>
-					<dd>
-						<p>D'LITES 3.0</p>
-						<p>男女同款时尚运动鞋</p>
-						<p>¥649.00</p>
-					</dd>
-				</dl>
-				<dl>
-					<dt>
-						<a href="/html/detail.html">
-							<img src="/images/color_pur_1.jpg"/>
-							
-							<span class="col">4色</span>
-						</a>
-					</dt>
-					<dd>
-						<p>D'LITES 3.0</p>
-						<p>男女同款时尚运动鞋</p>
-						<p>¥649.00</p>
-					</dd>
-				</dl>
-				<dl>
-					<dt>
-						<a href="/html/detail.html">
-							<img src="/images/color_pur_1.jpg"/>
-							
-							<span class="col">4色</span>
-						</a>
-					</dt>
-					<dd>
-						<p>D'LITES 3.0</p>
-						<p>男女同款时尚运动鞋</p>
-						<p>¥649.00</p>
-					</dd>
-				</dl>
-				<dl>
-					<dt>
-						<a href="/html/detail.html">
-							<img src="/images/color_pur_1.jpg"/>
-							
-							<span class="col">4色</span>
-						</a>
-					</dt>
-					<dd>
-						<p>D'LITES 3.0</p>
-						<p>男女同款时尚运动鞋</p>
-						<p>¥649.00</p>
-					</dd>
-				</dl>
+			<div class="recommond right" id="recommond"></div>
+			
+			
+			<div class="detail-cart" id="detailCart">
+				<div class="cart-left">
+					<div class="left-xq">
+						<h3>已添加到购物车</h3>
+						<img src="/images/color_wht_1.jpg" />
+						<p><b id="engName">D'LITES 1.0</b>  <em id="detailName">女子时尚运动鞋</em></p>
+						<p>
+							<span>颜色：<em id="detailColor">白色</em></span>
+							<span>尺码：<em id="detailSize">35</em></span>
+							<span>价格：¥<em id="detailMoney">599</em>.00</span>
+						</p>
+					</div>
+				</div>
+				<div class="cart-right">
+					<a href="/html/cart.html">查看购物车</a>
+					<a href="javascript:;" id="caclM">结算</a>
+				</div>
 			</div>
+			
+			
 		</main>
-
+		<!--返回头部的箭头-->
+		<div class="topback" id="topback"></div>
 		<div id="footer-container"></div>
 
 		<script type="text/html" id="catyList">
@@ -138,7 +113,7 @@
 			<div class="xq">
 				<p>货号： {{item.phone}}</p>
 				<p>颜色 : {{item.color}}</p>
-				<ul>
+				<ul class="ul">
 					<li>
 						<img class="s" src="/images/color_wht_1.jpg" />
 					</li>
@@ -150,27 +125,65 @@
 					</li>
 				</ul>
 				<div class="sN">
-					<div class="size">
-						尺码
+					<div class="size"  id="size">
+						<b id="sizeShoes">尺码</b>
 						<span></span>
+						<div class="size-show" id="sizeShow">
+							<ul>
+								<li>35</li>
+								<li>35.5</li>
+								<li>36</li>
+								<li>36.5</li>
+								<li>37</li>
+								<li>37.5</li>
+								<li>38</li>
+								<li>38.5</li>
+								<li>39</li>
+								<li>39.5</li>
+								<li>40</li>
+								<li>40.5</li>
+								<li>41</li>
+								<li>41.5</li>
+								<li>42</li>
+							</ul>
+						</div>
 					</div>
 					<div class="num">
-						<a href="javascript:;">-</a>
-						<input type="text" value="1" />
-						<a href="javascript:;">+</a>
+						<a href="javascript:;" id="sub">-</a>
+						<input type="text" value="1" id="cartNumb"/>
+						<a href="javascript:;" id="add">+</a>
 					</div>
 				</div>
-				<a href="#" class="xq-size">尺码对照表</a>
-
+				<a href="#" class="xq-size" id="xqSize">尺码对照表</a>
+				
 				<div class="cart">
-					<a href="javascript:;">加入购物车</a>
-					<a href="javascript:;">立即购买</a>
+					<a href="javascript:;" id="addShopcart">加入购物车</a>
+					<a href="javascript:;" id="payFor">立即购买</a>
 				</div>
 				<div class="share">
 					<a href="#">分享</a>
 					<a href="#">手机购买</a>
 				</div>
 			</div>
+			{{/each}}
+		</script>
+		<script type="text/html" id="groomList">
+			<h3><img src="/images/dianzan.png"/>为您推荐</h3>
+			{{each groom item}}
+				<dl>
+					<dt>
+						<a href="/html/detail.html?id={{item.id}}">
+							<img src="{{item.src}}"/>
+							
+							<span class="col">{{item.colornum}}色</span>
+						</a>
+					</dt>
+					<dd>
+						<p>{{item.engname}}</p>
+						<p>{{item.name}}</p>
+						<p>¥{{item.price}}.00</p>
+					</dd>
+				</dl>
 			{{/each}}
 		</script>
 		<script type="text/javascript" src="/libs/requirejs/require.js" data-main="/js/detail.js"></script>

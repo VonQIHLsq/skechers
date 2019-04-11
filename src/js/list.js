@@ -1,33 +1,59 @@
-require(["require.config"],()=>{
-	require(["jquery","template","header","footer"],($,template)=>{
+require(["require.config"], () => {
+	require(["jquery", "template", "header", "footer", "backtop"], ($, template) => {
 		class List {
-			constructor(){
+			constructor() {
 				this.init();
 			}
-			
-			init(){
-				let type = location.search.slice(6,7);
-				let title = decodeURI(location.search.slice(14));
+
+			init() {
+				this.type = location.search.slice(6, 7);
+				this.title = decodeURI(location.search.slice(14));
 				$.ajax({
-				 	url : "http://localhost/php/getlist.php?type="+type+"&title="+title,
-				 	method : "GET",
-				 	dataType: "json",
-				 	success : function (res) {
-				 		//console.log(res)
-				 		if(res.res_code === 1){
-				 			let list = res.res_list.data;
-				 			var html = template("catyList", { list });
-				 			//console.log(html);
-				 			$("#catyListContainer").html(html);
-				 			$("#listTitle").html(title);
-				 		}
-						
-				 	}
+					url: "http://localhost/php/getlist.php?type=" + this.type + "&title=" + this.title,
+					method: "GET",
+					dataType: "json",
+					success: (res) => {
+						//console.log(res)
+						if (res.res_code === 1) {
+							let list = res.res_list.data;
+							$("#listTitle").html(this.title);
+							
+							this.render(list);
+						}
+
+					}
+				})
+			}
+			
+			render(list){
+				this.html = template("catyList", {
+					list
+				});
+				$("#catyListContainer").html(this.html);
+				
+				this.priceDesc(list);
+				this.priceAsce(list);
+			}
+			
+			priceDesc(list){
+				$("#priceDown").on("click", () => {
+					list = list.sort((a, b) => {
+						return b.price - a.price;
+					})
+					this.render(list);
+				})
+			}
+			
+			priceAsce(list){
+				$("#priceUp").on("click", () => {
+					list = list.sort((a, b) => {
+						return a.price - b.price;
+					})
+					this.render(list);
 				})
 			}
 		}
-		
+
 		new List();
 	})
 })
-

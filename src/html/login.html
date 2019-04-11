@@ -18,7 +18,7 @@
 							<a href="#">验证码登录</a>
 						</p>
 					</div>
-					<form method="get" action="/php/login.php">
+					<form method="post" action="/php/login.php">
 						<input type="text" name="username" id="username" placeholder="请输入您的姓名" />
 						<input type="password" name="password" id="password" placeholder="请输入您的密码" />
 						<span></span>
@@ -44,7 +44,8 @@
 			</div>
 		</div>
 		<div id="footer-container"></div>
-		<div class="topback"></div>
+		<!--返回头部的箭头-->
+		<div class="topback" id="topback"></div>
 		<script type="text/javascript" src="/libs/requirejs/require.js" data-main="/js/login.js"></script>
 	</body>
 </html>

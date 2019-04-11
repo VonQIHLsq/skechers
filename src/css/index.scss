@@ -70,7 +70,7 @@ main .mian-container{
     font-size: 32px;
     text-align: center;
     color: #333;
-    margin-top: 34px;
+    margin-top: 25px;
     margin-bottom: .25em;
 }
 .newHot ul{
@@ -80,13 +80,13 @@ main .mian-container{
 .newHot ul li a{
     width: 257px;
     height: 68px;
-    padding-top: 124px;
-    background: url(/images/new1.jpg) no-repeat center 18px;
-    background-size: 200px 105px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 140px;
+    background: url(/images/new1.jpg) no-repeat center -16px;
+    background-size: 200px 200px;
 }
 .newHot ul li a p:nth-child(1){
     font-size: 16px;

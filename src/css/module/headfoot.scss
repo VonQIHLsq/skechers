@@ -52,7 +52,7 @@ header{
                     height: 74px;
                     a{
                         display: block;
-                        height: 74px;
+                        height: 70px;
                         padding: 0 8px;
                         line-height: 70px;
                         color: #000;
@@ -168,17 +168,59 @@ header{
     color: #fff;
 }
 
-//.cats{
-//  width: 100%;
-//  position: absolute;
-//  bottom: 0;
-//  left: 0;
-//}
-//.cats .cats-container{
-//  width: 710px;
-//  margin: 50px 0 50px 230px;
-//  background: red;
-//}
+.cats{
+    width: 100%;
+    min-height: 350px;
+    background-color: #fff;
+    border-bottom: 1px solid #8c8c8c;
+    position: absolute;
+    top: 111px;
+    left: 0;
+    z-index: 5;
+    display: none;
+    .cats-container{
+        float: left;
+        width: 454px;
+        min-height: 180px;
+        box-sizing: border-box;
+        margin: 50px 0 50px 230px;
+        border-right: 1px solid #8c8c8c;
+        color: #313131;
+        dl{
+            width: 151px;
+            float: left;
+            dt{
+                margin-top: 6px;
+                margin-bottom: 26px; 
+                font-size: 15px; 
+            }
+            dd{
+                font-size: 14px;
+                p{
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+    .cats-right{
+        float: left;
+        margin-left: 10px;
+        width: 244px;
+        margin-top: 45px;
+        img{
+            width: 244px;
+        }
+        p{
+            font-size: 15px;
+            margin-bottom: 35px;
+            margin-top: 10px;
+            a{
+                font-size: .9em;
+                color: #313131;
+            }
+        }
+    }
+}
 
 
 
@@ -354,6 +396,7 @@ footer .footer-container{
     right: 30px;
     width: 44px;
     height: 44px;
+    display: none;
     border-radius: 50%;
     background: #808080 url(/images/topback.png) no-repeat center center;
 }
